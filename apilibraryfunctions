@@ -1,0 +1,91 @@
+API Library
+
+#Automated music information retrieval
+#Automated music emotion retrieval
+#Automated feature extraction
+
+Features to extract from a composition and the feature's classification [of data]
+
+Title, Syntactical	
+
+Artist, Syntactical	
+
+EIF Approximate, Numerical, values range from 1-10	
+
+Year Released, Numerical
+
+Tempi in B.P.M., Numerical
+    see myFunction below for boundaries
+      assuming a standardization of tempi
+        based on spectrogram analysis
+
+Dominance, Numerical, 1 - 100
+
+Valence (X),	 Numerical, 1 - 100
+
+Arousal (Y), Numerical, 1 - 100
+
+Acousticness,  Numerical, 1 - 100
+
+Prosody, Binary
+   Dominance (YES / NO) 	
+
+Consonance, Binary	
+  Dominance (YES / NO) 	
+
+Mode, Binary
+  Dominance (YES / NO)
+
+Key	Signature, Numerical,
+  Standardized, from Integer Representations of
+  Pentatonic Values, from FS, (INTEGER)
+
+Crescendo, Binary
+  Dominance (YES / NO)
+
+Instrumemtalness, Numerical, 1 - 100
+
+Loudness, Numerical, in decibels, 1 - 100
+
+Prob of Popularity for MM Audience out of 100 	
+
+Duration of Song, Numerical in Seconds 100 - 10000	
+
+Musical Complexity 
+ 
+
+  Lyrical [Musical] Complexity
+
+    ≈	
+
+    Intra-Song Consistency of Primary Emotion 	
+
+    Intra-Song Consistency of Secondary Emotion 	
+
+    Dissonance, Binary
+       Dominance (YES / NO)
+  
+      Else, 
+        Assonance, Binary
+           Dominance (YES / NO)
+  
+      Consonance
+          Dominance (YES / NO)
+          
+K-Nearest Neighbor Function 
+(, to determine the closest distance to Valence and Arousal, with Aroulal Being the Y Coordinate, and Valence Being the X Coordinate,
+
+[P(n) = P(n − 2) + P(n − 3)]  
+Then, [Pn = 2Pn − 1 + Pn − 2], 
+[L1 = 1, L2 = 3, and Ln = Ln−1 + Ln−2]. 		Binary (20)	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	Numerical Value in Time-Measured Duration Minimum 1, maxium, 1800	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	
+Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	Numerical Value from 1 - 100 	classic bollywood
+
+"Valence to Arousal Ratio"
+(A recurrence function, relation)
+
+
+Baghon Mein Bahar Hai	Lata Mangeshkar		1969	82	36	42		-10																			classic bollywood
+Meet Na Mila Re Man Ka	Kishore Kumar		1973	82	33	49		13	62	NO	YES	Minor (0)	C MINOR (0)	((16) //(12)) ( (14))	YES	15	-15	75	393	72 (DISSONANT)	62	80					classic bollywood
+Yeh Raat Yeh Chandni (From "Jaal")	Hemant Kumar		2018	81	50	30		11	62			Major			YES	28	-18		382	34 (ConsonanT)	65						classic bollywood
+
+myFunction, to identify the valence (V), arousal (A), and dominance (D) of a composition
